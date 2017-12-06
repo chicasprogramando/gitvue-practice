@@ -1,24 +1,20 @@
-# vue-simple-boilerplate
+# GitVue Practice
+La idea de este repositorio, es que puedan conocer cómo es que funciona VueJS sin temor a romper algo en el proyecto de CoffeeMap. A diferencia del proyecto que está en coffeemap, éste es mucho más simple, no tiene ningún tipo de configuración ni nada parecido.
 
-> The simplest possible Vue setup in a single HTML file
+### Instalación & Uso
+```sh
+$ git clone https://github.com/chicasprogramando/gitvue-practice.git
+$ cd gitvue-practice
+$ npm install -g live-server
+```
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init simple#1.0 my-project`
-
-### Before You Start...
-
-This boilerplate is targeted at beginners who want to start exploring Vue without the distraction of a complicated development environment.
-
-For advanced features such as asset compilation, hot-reload, lint-on-save, unit testing, and CSS extraction, we recommend that more experienced developers use one of the [other templates](https://github.com/vuejs-templates/).
-
-## Usage
-
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
+Una vez que tengan el repo en su computadora, solamente van a tener que iniciar el servidor en el directorio donde lo descargaron.
 
 ``` bash
-$ npm install -g vue-cli      # Install vue-cli if you haven't already
-$ vue init simple my-project  # Create a new project based on this template
-$ cd my-project               # Navigate into your new project folder
-
-$ npm install -g live-server  # Install live-server if you haven't already
-$ live-server                 # Run live-server and open it in your browser
+$ live-server
 ```
+
+### Objetivos:
+  - Crear un branch con la siguiente nomenclatura "practice-nombreapellido"
+  - Incursionar en VueJS, haciendo uso de propiedades, componentes, diferentes secciones (router), etc.
+  - ¡Jugar con Git! (add, push, pull, merge, rebase, rever, cherry-pick, etc)
