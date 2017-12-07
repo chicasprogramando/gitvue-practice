@@ -4,3 +4,14 @@ var title = new Vue({
         message: 'The Progressive JavaScript Framework',
     }
 });
+
+var features = new Vue({
+    el: '.features',
+    data: {
+        items: [
+            {text: 'Approachable'},
+            {text: 'Versatile'},
+            {text: 'Performant'},
+            ]
+        },
+});

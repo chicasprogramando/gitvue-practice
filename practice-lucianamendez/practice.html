@@ -9,9 +9,16 @@
 </head>
 <body>
     <div class="title">
-       <h1 v-bind:title="message">
+       <h1 v-bind:title="message"> <!--attributo title enlazado con la propiedad message-->
            The New Kid on the Block
        </h1>
+    </div>
+    <div class="features">
+        <ul>
+            <li v-for="item in items">
+                {{item.text}}
+            </li>
+        </ul>
     </div>
     <script src="practice.js"></script>
 </body>
