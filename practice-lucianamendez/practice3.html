@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        [v-cloak] {
+            background-color: red;
+        }
+    </style>
+    <!--<script src="https://unpkg.com/vue"></script>-->
+    <script src="vue.js"></script>
+
+
+    <title>Practice3</title>
+</head>
+
+<body>
+
+    <div v-cloak>Hello World</div>
+
+    <div id="v-html">
+        <h1 v-html="intro"></h1>
+        <!-- <h1 v-text=intro></h1> text imprime los tags htmls como texto plano-->
+    </div>
+
+    <div id="v-show">
+        <h1 v-show="viewed">{{intro}}</h1>
+        <h2 v-if="viewed">{{message}}</h2>
+        <h2 v-else="viewed">{{message2}}</h2>
+    </div>
+
+    <div id="once-pre">
+        <!--only render once-->
+        <h1 v-once>{{message}}</h1>
+        <!--Skip compilation for this element and all its children-->
+        <h1 v-pre>{{message}}</h1>
+
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#v-html',
+            data: {
+                message: 'Hello Vue World',
+                intro: 'Welcome to the Tutorial <small>It is all about Vue.js</small>',
+            }
+        })
+
+
+        var app2 = new Vue({
+            el: '#v-show',
+            data: {
+                intro: 'Do you see it?',
+                message: 'Now you see me',
+                message2: 'Now you don\'t',
+                viewed: true
+            }
+        })
+
+        var app3 = new Vue({
+            el: '#once-pre',
+            data: {
+                message: 'Try to change me'
+            }
+        })
+    </script>
+
+
+
+</body>
+
+</html>

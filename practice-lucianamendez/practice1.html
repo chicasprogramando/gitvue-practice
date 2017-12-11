@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practice1</title>
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <div class="title">
+    <h1 v-bind:title="message">
+      <!--v-bind -->
+      The New Kid on the Block
+      <!--attributo title enlazado con la propiedad message-->
+    </h1>
+  </div>
+
+  <div class="features">
+    <!--for -->
+    <ul>
+      <li v-for="item in items">
+        {{item.text}}
+      </li>
+    </ul>
+  </div>
+
+  <div class="inverted">
+    <button v-on:click="reverseMessage">{{ message }}</button>
+    <!--v-on:click -->
+  </div>
+
+  <div class="input">
+    <!--v-model user imput-->
+    <p>{{ message }}</p>
+    <input v-model="message">
+  </div>
+
+  <script>
+    var title = new Vue({
+      el: '.title',
+      data: {
+        message: 'The Progressive JavaScript Framework',
+      }
+    });
+
+    var features = new Vue({
+      el: '.features',
+      data: {
+        items: [{
+            text: 'Approachable'
+          },
+          {
+            text: 'Versatile'
+          },
+          {
+            text: 'Performant'
+          },
+        ]
+      },
+    });
+
+
+    var inverted = new Vue({
+      el: '.inverted',
+      data: {
+        message: 'Inviérteme'
+      },
+      methods: {
+        reverseMessage: function () {
+          this.message = this.message.split('').reverse().join('')
+        }
+      }
+    })
+
+    var input = new Vue({
+      el: '.input',
+      data: {
+        message: 'Type something...'
+      }
+    })
+  </script>
+</body>
+
+</html>

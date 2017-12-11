@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice 2</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ol>
+            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+                <!--con v-bind linkeamos "todo" con "item"-->
+            </todo-item>
+        </ol>
+    </div>
+
+    <div id="app2">
+        <ol>
+            <todo-item style='list-style-type:none' v-for="item in shopList" v-bind:todo="item" v-bind:key="item.id">
+            </todo-item>
+        </ol>
+    </div>
+
+
+    <script>
+        Vue.component('todo-item', {
+            props: ['todo'],
+            template: '<li>{{ todo.text }}</li>'
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                groceryList: [{
+                        id: 0,
+                        text: 'Vegetables'
+                    },
+                    {
+                        id: 1,
+                        text: 'Cheese'
+                    },
+                    {
+                        id: 2,
+                        text: 'Whatever else humans are supposed to eat'
+                    }
+                ]
+            }
+        })
+
+
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                shopList: [{
+                        id: 0,
+                        text: 'Shoes'
+                    },
+                    {
+                        id: 1,
+                        text: 'Socks'
+                    },
+                    {
+                        id: 2,
+                        text: 'Cloak(?'
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>

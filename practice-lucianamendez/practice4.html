@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>Practice4</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 :title="title">{{message}}</h1>
+        <img :src="url" :alt="title" :title="title" />
+    </div>
+    <div id="app2">
+        <h1>{{ message }}</h1>
+        <ul>
+            <li v-for="todo in todos">{{todo.text}}</li>
+            <li v-for="count in count">item #{{count}}</li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: "hello world",
+                title: "You loaded the page on " + new Date(),
+                url: "Vue.js_Logo.svg.png"
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                message: 'Hello Vue World',
+                todos: [{
+                        text: 'Learn Vue',
+                        id: 4
+                    },
+                    {
+                        text: 'Like the video',
+                        id: 2
+                    },
+                    {
+                        text: 'Subscribe to DevMarketer',
+                        id: 6
+                    }
+                ],
+                count: 1000
+            }
+        })
+    </script>
+</body>
+
+</html>
