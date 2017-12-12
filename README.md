@@ -1,34 +1,21 @@
-# coffeemap
+=======
+# GitVue Practice
+La idea de este repositorio, es que puedan conocer cómo es que funciona VueJS sin temor a romper algo en el proyecto de CoffeeMap. A diferencia del proyecto que está en coffeemap, éste es mucho más simple, no tiene ningún tipo de configuración ni nada parecido.
 
-> A map with nice coffees in the city. Made with :heart: and :coffee:
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+### Instalación & Uso
+```sh
+$ git clone https://github.com/chicasprogramando/gitvue-practice.git
+$ cd gitvue-practice
+$ npm install -g live-server
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Una vez que tengan el repo en su computadora, solamente van a tener que iniciar el servidor en el directorio donde lo descargaron.
 
+``` bash
+$ live-server
+```
 
-## WIKI
-
-View [wiki](https://github.com/chicasprogramando/coffeemap/wiki).
-
-## CONTRIBUTING
-
-View [contributors](https://github.com/chicasprogramando/coffeemap/graphs/contributors).
-
-## LICENSE
-
-[MIT](./LICENSE)
+### Objetivos:
+  - Crear un branch con la siguiente nomenclatura "practice-nombreapellido"
+  - Incursionar en VueJS, haciendo uso de propiedades, componentes, diferentes secciones (router), etc.
+  - ¡Jugar con Git! (add, push, pull, merge, rebase, rever, cherry-pick, etc)
