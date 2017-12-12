@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VueJs Tutorial - coligo</title>
+    <meta charset="utf-8"><!-- Ojo agregarlo-->
+  </head>
+  <body>
+    <div id="vue-instance">
+        {{ message }}
+      <!-- this will be the DOM element we will mount our VueJs instance to -->
+    </div>
+    <div id="app-2">
+      <span v-bind:title="message"> <!-- agrega el aributo title a el span -->
+        ¡Deja tu mouse sobre este mensaje unos segundos para ver el atributo `title` enlazado dinámicamente!
+      </span>
+    </div>
+    <div id="app-3">
+        <p v-if="seen">Now you see me</p>
+      </div>
+      <div id="app-4">
+          <ol>
+            <li v-for="todo in todos">
+              {{ todo.text }}
+            </li>
+          </ol>
+        </div>
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+          </div>
+      
+  <script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.js"></script>
+  <script>
+      // our VueJs instance bound to the div with an id of vue-instance
+      var vm = new Vue({
+        el: '#vue-instance',
+        data: {
+          message: 'Hello Vue!'
+        }
+      });
+      var app2 = new Vue({
+        el: '#app-2',
+        data: {
+          message: 'You loaded this page on ' + new Date()
+        }
+      })
+      var app3 = new Vue({
+        el: '#app-3',
+        data: {
+          seen: true
+        }
+      })
+      var app4 = new Vue({
+        el: '#app-4',
+        data: {
+          todos: [
+            { text: 'Learn JavaScript' },
+            { text: 'Learn Vue' },
+            { text: 'Build something awesome' }
+          ]
+        }
+      })
+      var app5 = new Vue({
+        el: '#app-5',
+        data: {
+          message: 'Hello Vue.js!'
+        },
+        methods: {
+          reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+          }//La instancia del objeto
+        }
+      })
+
+      
+    </script>
+  </body>
+</html>
