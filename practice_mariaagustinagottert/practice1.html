@@ -5,28 +5,37 @@
     <meta charset="utf-8"><!-- Ojo agregarlo-->
   </head>
   <body>
-    <div id="vue-instance">
+    <div style="text-align: center; font-size: 30px;" id="vue-instance">
         {{ message }}
       <!-- this will be the DOM element we will mount our VueJs instance to -->
     </div>
-    <div id="app-2">
+    <div style="padding: 40px;" id="app-2">
+      <p style="text-align: center; background-color: rgb(192,192,192); color: white; font-size: 30px"><strong>v-bind</strong></p>
       <span v-bind:title="message"> <!-- agrega el aributo title a el span -->
         ¡Deja tu mouse sobre este mensaje unos segundos para ver el atributo `title` enlazado dinámicamente!
       </span>
     </div>
-    <div id="app-3">
+    <div id="app-3" style="padding: 40px;">
+      <p style="text-align: center ; background-color: rgb(192,192,192); color: white; font-size: 30px"><strong>v-if</strong></p>
         <p v-if="seen">Now you see me</p>
       </div>
-      <div id="app-4">
+      <div id="app-4" style="padding: 40px;">
+      <p style="text-align: center ; background-color: rgb(192,192,192); color: white; font-size: 30px"><strong>v-for</strong></p>
           <ol>
             <li v-for="todo in todos">
               {{ todo.text }}
             </li>
           </ol>
         </div>
-        <div id="app-5">
+        <div id="app-5" style="padding: 40px;">
+          <p style="text-align: center ; background-color: rgb(192,192,192); color: white; font-size: 30px"><strong>v-on </strong></p>
             <p>{{ message }}</p>
             <button v-on:click="reverseMessage">Reverse Message</button>
+          </div>
+          <div id="app-6" style="padding: 40px;">
+            <p style="text-align: center ; background-color: rgb(192,192,192); color: white; font-size: 30px"><strong>v-model </strong></p>
+            <p>{{ message }}</p>
+            <input v-model="message">
           </div>
       
   <script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.js"></script>
@@ -71,6 +80,12 @@
           }//La instancia del objeto
         }
       })
+      var app6 = new Vue({
+       el: '#app-6',
+       data: {
+       message: 'Hello Vue!'
+      }
+     })
 
       
     </script>
