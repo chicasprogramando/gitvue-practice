@@ -1,3 +1,4 @@
+=======
 # GitVue Practice
 La idea de este repositorio, es que puedan conocer cómo es que funciona VueJS sin temor a romper algo en el proyecto de CoffeeMap. A diferencia del proyecto que está en coffeemap, éste es mucho más simple, no tiene ningún tipo de configuración ni nada parecido.
 
