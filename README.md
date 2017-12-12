@@ -1,24 +1,34 @@
-# vue-simple-boilerplate
+# coffeemap
 
-> The simplest possible Vue setup in a single HTML file
+> A map with nice coffees in the city. Made with :heart: and :coffee:
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init simple#1.0 my-project`
-
-### Before You Start...
-
-This boilerplate is targeted at beginners who want to start exploring Vue without the distraction of a complicated development environment.
-
-For advanced features such as asset compilation, hot-reload, lint-on-save, unit testing, and CSS extraction, we recommend that more experienced developers use one of the [other templates](https://github.com/vuejs-templates/).
-
-## Usage
-
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
+## Build Setup
 
 ``` bash
-$ npm install -g vue-cli      # Install vue-cli if you haven't already
-$ vue init simple my-project  # Create a new project based on this template
-$ cd my-project               # Navigate into your new project folder
+# install dependencies
+npm install
 
-$ npm install -g live-server  # Install live-server if you haven't already
-$ live-server                 # Run live-server and open it in your browser
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## WIKI
+
+View [wiki](https://github.com/chicasprogramando/coffeemap/wiki).
+
+## CONTRIBUTING
+
+View [contributors](https://github.com/chicasprogramando/coffeemap/graphs/contributors).
+
+## LICENSE
+
+[MIT](./LICENSE)
