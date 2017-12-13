@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>Practice6</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Hello {{fullName}}</h1>
+        <h1>Your experience:{{experience}} - {{level}}</h1>
+        <ul>
+            <li>First Name:{{firstName}}</li>
+            <li>Last Name:{{lastName}}</li>
+        </ul>
+        <label>First Name:</label>
+        <input type="text" v-model="firstName" />
+        <label>Last Name:</label>
+        <input type="text" v-model="lastName" />
+        <hr>
+        <button @click="increaseXP">Increase XP</button>
+        <button @click="decreaseXP">Decrease XP</button>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                firstName: '',
+                lastName: '',
+                experience: 0
+            },
+            methods: {
+                increaseXP: function () {
+                    return this.experience += 10
+                },
+                decreaseXP: function () {
+                    return this.experience -= 10
+                }
+            },
+            computed: {
+                fullName: function () {
+                    return this.firstName + ' ' + this.lastName
+                },
+                level: function () {
+                    if (this.experience >= 200) {
+                        return "Pro"
+                    } else if (this.experience >= 100) {
+                        return "Intermediate"
+                    } else if (this.experience >= 0) {
+                        return "Beginner"
+                    } else {
+                        return "Banned"
+                    }
+                }
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>
