@@ -12,7 +12,7 @@
     <div style="padding: 40px;" id="app-2">
       <p style="text-align: center; background-color: rgb(192,192,192); color: white; font-size: 30px"><strong>v-bind</strong></p>
       <span v-bind:title="message"> <!-- agrega el aributo title a el span -->
-        ¡Deja tu mouse sobre este mensaje unos segundos para ver el atributo `title` enlazado dinámicamente!
+        ¡Deja tu mouse sobre este mensaje unos segundos para ver el atributo `title` enlazado dinámicamente! hazlo ya.....
       </span>
     </div>
     <div id="app-3" style="padding: 40px;">
@@ -77,16 +77,16 @@
         methods: {
           reverseMessage: function () {
             this.message = this.message.split('').reverse().join('')
-          }//La instancia del objeto
+          }// this se refiere a la instancia del objeto, app5
         }
       })
-      var app6 = new Vue({
+      var app6 = new Vue({ //app 6 es la instancia, vue es la clase
        el: '#app-6',
        data: {
        message: 'Hello Vue!'
       }
      })
-
+     
       
     </script>
   </body>

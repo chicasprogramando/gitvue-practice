@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Proyecto</title>
+</head>
+<body>
+  
+
+<div id="app">
+  <p v-if="show">
+    {{ message }}
+  </p>
+  <p v-else="">
+    El texto esta oculto
+  </p>
+   <p v-show="show">
+    {{ message }}
+  </p>
+</div>
+
+
+
+
+
+	<script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.js"></script>
+	<script type="text/javascript">
+    // 
+    const vm = {
+      el: '#app',
+      data() {
+        return {
+          message: 'Hello Vue!',
+          show: true
+        }
+      }
+    }
+
+    const app = new Vue(vm)
+		
+      
+
+	</script>
+</body>
+</html>

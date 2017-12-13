@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Componentes</title>
+</head>
+<body>
+  <div id="app">
+    <ol>
+  <!-- Crea una instancia del componente todo-item -->
+   <todo-item></todo-item>
+   <todo-item></todo-item>
+   <todo-item></todo-item>
+   <todo-item></todo-item>
+   <todo-item></todo-item>
+   <todo-item></todo-item>
+   </ol>
+   </div>
+
+
+
+
+
+	<script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.js"></script>
+	<script type="text/javascript">
+		
+      Vue.component('todo-item', {
+      template: '<li>This is a todo</li>'
+      })
+
+      new Vue({
+      	el:"#app"
+
+      })
+
+	</script>
+</body>
+</html>
