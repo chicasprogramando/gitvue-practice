@@ -6,13 +6,13 @@ La idea de este repositorio, es que puedan conocer cómo es que funciona VueJS s
 ```sh
 $ git clone https://github.com/chicasprogramando/gitvue-practice.git
 $ cd gitvue-practice
-$ npm install -g live-server
+$ npm install
 ```
 
 Una vez que tengan el repo en su computadora, solamente van a tener que iniciar el servidor en el directorio donde lo descargaron.
 
 ``` bash
-$ live-server
+$ npm run dev
 ```
 
 ### Objetivos:
