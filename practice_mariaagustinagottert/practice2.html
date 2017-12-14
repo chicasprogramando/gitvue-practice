@@ -17,6 +17,12 @@
    </ol>
    </div>
 
+   <div id="example-2">
+  <simple-counter></simple-counter>
+  <simple-counter></simple-counter>
+  <simple-counter></simple-counter>
+  </div>
+
 
 
 
@@ -31,6 +37,19 @@
       new Vue({
       	el:"#app"
 
+      })
+      var data = { counter: 0 }
+      Vue.component('simple-counter', {
+        template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+        // 'data' es técnicamente una función, por lo que Vue no
+        // se quejará, pero estamos devolviendo la misma referencia
+        // de objeto en cada instancia de componente
+        data: function () {
+          return data
+        }
+      })
+      new Vue({
+        el: '#example-2'
       })
 
 	</script>
